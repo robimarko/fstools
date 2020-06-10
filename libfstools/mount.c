@@ -53,8 +53,8 @@ mount_move(const char *oldroot, const char *newroot, const char *dir)
 
 	ret = mount(olddir, newdir, NULL, MS_NOATIME | MS_MOVE, NULL);
 
-/*	if (ret)
-		ULOG_ERR("failed %s %s: %m\n", olddir, newdir);*/
+	if (ret)
+		ULOG_ERR("failed %s %s: %m\n", olddir, newdir);
 
 	return ret;
 }
