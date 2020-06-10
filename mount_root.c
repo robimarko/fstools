@@ -32,10 +32,10 @@ start(int argc, char *argv[1])
 {
 	struct volume *root;
 	struct volume *data = volume_find("rootfs_data");
-	struct stat s;
+	/*struct stat s;
 
 	if (!getenv("PREINIT") && stat("/tmp/.preinit", &s))
-		return -1;
+		return -1;*/
 
 	if (!data) {
 		root = volume_find("rootfs");
